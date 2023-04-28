@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TechChat</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <div class="header-contents">
+        <h1>TechChat</h1>
+        <div class="new-btn">
+          <%= link_to '質問する', '/questions/new',class: "new-link" %>
+        </div>
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>
